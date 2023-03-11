@@ -26,3 +26,26 @@ body {
 .content:nth-of-type(5) > .img  {
   background-image: url("./mems/5.jpg");
 }
+
+.accordion input {
+  display: none;
+}
+
+.accordion label {
+  position: relative;
+  display: block;
+  background: #eee;
+  padding: 10px;
+}
+
+.accordion .content {
+  display: none;
+}
+
+.accordion input:checked + label {
+  background: #ccc;
+}
+
+.accordion input:checked + label + .content {
+  display: block;
+}
