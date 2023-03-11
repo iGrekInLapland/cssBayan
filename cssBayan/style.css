@@ -106,22 +106,18 @@ body {
     cursor: pointer;
   }
   /* icon of state and hover effects */
-  .accordion:hover label::after {
-    content: "";
-    background-position: center;
+  .accordion:hover label{
+    background-position: center right;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url("./ico/plus-64x64.png");
-    width: 1.25rem;
-    height: 1.25rem;
-    position: absolute;
-    right: 0.625rem;
-    transition: transform 0.3s linear;
   }
 
-  .accordion:hover input:checked + label::after {
-    content: "";
-    transform: rotate(45deg);
+  .accordion:hover input:checked + label{
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("./ico/rot-plus-64x64.png");
   }
   .accordion input:hover + label + .content{
     display: block;
