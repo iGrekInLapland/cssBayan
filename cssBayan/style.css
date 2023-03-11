@@ -3,7 +3,7 @@ body {
   margin: 0 auto;
 }
 .content {
-  width: 400px;
+  width: 25rem;
   height: 0;
   margin: auto;
 }
@@ -41,7 +41,7 @@ body {
   position: relative;
   display: block;
   background: #eee;
-  padding: 10px;
+  padding: 0.625rem;
 }
 
 .accordion .content {
@@ -61,7 +61,7 @@ body {
 
 @keyframes appearance {
   0% {
-    height: 100px;
+    height: 6.25rem;
     transform: scale(40%);
   }
   100% {
@@ -81,7 +81,7 @@ body {
   }
   .content {
     width: 100%;
-    height: 230px;
+    height: 14.38rem;
   }
 }
 /*tablet 820 x 1180 */
@@ -90,7 +90,7 @@ body {
     font-size: 2rem;
   }
   .content {
-    height: 520px;
+    height: 32.5rem;
   }
 }
 /*desktop 1920×1080 */
@@ -100,7 +100,7 @@ body {
     font-size: 3rem;
   }
   .content {
-    height: 920px;
+    height: 57.5rem;
   }
   .accordion * {
     cursor: pointer;
@@ -112,10 +112,10 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url("./ico/plus-64x64.png");
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
     position: absolute;
-    right: 10px;
+    right: 0.625rem;
     transition: transform 0.3s linear;
   }
 
