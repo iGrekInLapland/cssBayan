@@ -52,42 +52,81 @@ body {
   background: #ccc;
 }
 
-.accordion input:checked + label + .content {
+.accordion input:checked + label + .content{
   display: block;
+}
+.accordion input:checked + label + .content .img {
   animation: 0.3s linear 0s forwards alternate appearance;
 }
 
 @keyframes appearance {
   0% {
-    height: 200px;
+    height: 100px;
     transform: scale(40%);
   }
   100% {
-    height: 300px;
-    transform: scale(100%);
+    height: 100%;
   }
 }
 
 
-/* icon of state and hover effects */
-.accordion:hover label::after {
-  content: "";
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url("./ico/plus-64x64.png");
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  right: 10px;
-  transition: transform 0.3s linear;
-}
 
-.accordion:hover input:checked + label::after {
-  content: "";
-  transform: rotate(45deg);
-}
 
-.accordion * {
-  cursor: pointer;
+
+/* media */
+/*mobile 320 x 568 */
+@media (min-width: 300px) {
+  body {
+    font-size: 1rem;
+  }
+  .content {
+    width: 100%;
+    height: 230px;
+  }
 }
+/*tablet 820 x 1180 */
+@media (min-width: 650px) {
+  body {
+    font-size: 2rem;
+  }
+  .content {
+    height: 520px;
+  }
+}
+/*desktop 1920×1080 */
+@media (min-width: 1300px) {
+  
+  body {
+    font-size: 3rem;
+  }
+  .content {
+    height: 920px;
+  }
+  .accordion * {
+    cursor: pointer;
+  }
+  /* icon of state and hover effects */
+  .accordion:hover label::after {
+    content: "";
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("./ico/plus-64x64.png");
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    transition: transform 0.3s linear;
+  }
+
+  .accordion:hover input:checked + label::after {
+    content: "";
+    transform: rotate(45deg);
+  }
+  .accordion input:hover + label + .content{
+    display: block;
+  }
+  .accordion input:hover + label + .content .img {
+    animation: 0.3s linear 0s forwards alternate appearance;
+  }
+} 
