@@ -49,3 +49,21 @@ body {
 .accordion input:checked + label + .content {
   display: block;
 }
+
+.accordion:hover label::after {
+  content: "";
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("./ico/plus-64x64.png");
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  transition: transform 0.3s linear;
+}
+
+.accordion:hover input:checked + label::after {
+  content: "";
+  transform: rotate(45deg);
+}
